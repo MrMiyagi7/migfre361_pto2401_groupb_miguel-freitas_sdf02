@@ -1,0 +1,210 @@
+body {
+background: #ffb88e;
+text-align: center;
+font-family: 'Oxygen', sans-serif;
+}
+/* Header */
+.logo {
+  width: 75vw;
+  height: 25vh;
+  margin: 40px auto;
+}
+
+.animated-btn {    /* selector sets default values                                  for all buttons*/
+  width: 125px;
+  height: 35px;
+  background: transparent;
+  border-radius: 5px;
+  padding: 12px 27px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 3px 2px #000000;
+  border: none;
+  margin: 5px;
+  display: inline-block;
+  font-family: 'Oxygen', sans-serif;
+}
+
+/* Animations */ /* Unable to get @keyframe animation to function */
+/* @keyframes slideinleft { 
+  from {
+    trasform: translateX(-400px);
+  }
+  to {
+    trasform: translateX(0);
+  }
+  
+ 
+}
+ 
+.animation {
+  animation: slideinleft 1s ease-in-out 1s 1 normal none;
+}   */
+
+
+ /* Button1 */  /*Button 1 performs a transition when hovered over by the user which changes tha background gradient */
+.btn-1 {
+  background: linear-gradient(0deg, #d62828 0%, #f77f00 100%);
+  border: none; 
+  height: 35px;
+  width: 125px;
+  line-height: 35px;
+  padding: 0;
+  }
+
+.btn-1:hover {
+background: #d62828; 
+background: linear-gradient(0deg, ff4d6d 0%, #ff758f 100%); 
+font-weight: 700;
+}
+
+/* Button 2 */ /*Button 2 performs a transition in which the elements before and after slide on all the edges of the button, while the background changes and text weight and color change*/
+
+.btn-2 {
+background: linear-gradient(0deg, #d62828 0%, #f77f00 100%);
+  width: 125px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-2 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-2:before, .btn-2:after { /*For top and right edges*/
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+   background: #d62828;
+  transition: all 0.3s ease;
+}
+.btn-2:before {
+  height: 0%;
+  width: 3px;
+}
+.btn-2:after {
+  width: 0%;
+  height: 3px;
+}
+.btn-2:hover{
+  background: #edf2f4;
+  box-shadow: none;
+  font-weight: 700;
+}
+.btn-2:hover:before {
+  height: 100%;
+}
+.btn-2:hover:after {
+  width: 100%;
+}
+.btn-2 span:hover{
+   color: #d62828;
+}
+.btn-2 span:before, .btn-2 span:after { /*for bottom and left edges*/
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  background: #d62828;
+  transition: all 0.5s ease;
+}
+.btn-2 span:before { /*makes transition element not visble*/
+  width: 3px;
+  height: 0%;
+}
+.btn-2 span:after { /*makes transition element not visble*/
+  width: 0%;
+  height: 3px;
+}
+.btn-2 span:hover:before { /*makes transition element visble when hovered on */
+  height: 100%;
+}
+.btn-2 span:hover:after { /*makes transition element visble when hovered on */
+  width: 100%;
+}
+
+/* Button 3 */ /*Button 3 performs a transition in which the elements before and after slide on the top edges of the button, while the background changes and text weight and color change*/
+
+.btn-3 {
+background: linear-gradient(0deg, #d62828 0%, #f77f00 100%);
+  width: 125px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0;
+  border: none;
+}
+
+  .btn-3 span {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+      
+  }
+  
+  .btn-3:after, .btn-3:before { /*For top edge */
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    background: #d62828;
+    transition: all 0.5s ease;
+    
+  }
+
+.btn-3:hover {
+  color: #d62828;
+  background: #edf2f4;
+  font-weight: 700;
+}
+
+.btn-3:before { /*makes transition element not visble*/
+  height: 3px;
+  width: 0%;
+}
+
+.btn-3:after { /*makes transition element not visble*/
+  width: 3px;
+  height: 0%;
+}
+
+.btn-3:hover:before { /*makes transition element visble when hovered on */
+  width: 100%;
+}
+.btn-3 span:after, .btn-3 span:before { /*For bottom edge */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    background: #d62828;
+    transition: all 0.5s ease;
+    
+  }
+
+.btn-3:hover {
+  color: #d62828;
+  background: #edf2f4;
+}
+
+.btn-3 span:before { /*makes transition element not visble*/
+  height: 3px;
+  width: 0%;
+}
+
+.btn-3 span:after { /*makes transition element not visble*/
+  width: 2px;
+  height: 0%;
+}
+
+.btn-3 span:hover:before { /*makes transition element visble when hovered on */
+  width: 100%;
+}
+
